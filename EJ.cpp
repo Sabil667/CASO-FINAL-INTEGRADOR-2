@@ -31,6 +31,19 @@ void show_txt_files(const std::string& filename) {
                     }
                     file.close();
                 } else {
+                    throw std::ios_base::failure("No se pudo abrir el archivo " + targetFilename);
+                }
+
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            throw std::runtime_error("No se encontro el archivo " + targetFilename);
+        }
+
+
+                }
 
 
 
