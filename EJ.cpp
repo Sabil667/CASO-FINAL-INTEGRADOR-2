@@ -22,4 +22,15 @@ void show_txt_files(const std::string& filename) {
             if (entry.is_regular_file() && entry.path().filename() == targetFilename) {
                 std::cout << "Contenido del archivo " << targetFilename << ":\n";
 
+                // Abre y muestra el contenido del archivo .txt
+                std::ifstream file(entry.path());
+                if (file.is_open()) {
+                    std::string line;
+                    while (std::getline(file, line)) {
+                        std::cout << line << std::endl;
+                    }
+                    file.close();
+
+
+
 
