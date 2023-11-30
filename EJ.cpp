@@ -41,6 +41,9 @@ void show_txt_files(const std::string& filename) {
         if (!found) {
             throw std::runtime_error("No se encontro el archivo " + targetFilename);
         }
+    }   catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
 
 
                 }
