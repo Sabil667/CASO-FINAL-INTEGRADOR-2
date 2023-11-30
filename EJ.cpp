@@ -44,9 +44,7 @@ void show_txt_files(const std::string& filename) {
     }   catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
     }
-
-
-                }
+}
 
 
 
