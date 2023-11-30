@@ -30,6 +30,7 @@ void show_txt_files(const std::string& filename) {
                         std::cout << line << std::endl;
                     }
                     file.close();
+                } else {
 
 
 
