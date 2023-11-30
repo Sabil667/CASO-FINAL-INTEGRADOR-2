@@ -17,4 +17,9 @@ void show_txt_files(const std::string& filename) {
     bool found = false;
     std::string targetFilename = filename + ".txt";  // Agrega la extensión .txt
 
+    try {
+        for (const auto& entry : std::filesystem::directory_iterator(".")) {
+            if (entry.is_regular_file() && entry.path().filename() == targetFilename) {
+                std::cout << "Contenido del archivo " << targetFilename << ":\n";
+
 
